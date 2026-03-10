@@ -8,11 +8,12 @@ Computes the next version, updates all version files, creates a release branch, 
 
 ## Versioning Rules
 
-Starting at `0.0.1`. Rules:
-- If patch < 9: increment patch (e.g. `0.0.3` → `0.0.4`)
-- If patch = 9: increment minor, reset patch to 0 (e.g. `0.0.9` → `0.1.0`)
-- If minor = 9 and patch = 9: increment major, reset minor and patch (e.g. `0.9.9` → `1.0.0`)
-- All releases are GitHub pre-releases until version reaches `1.0.0`
+Starting at `0.0.1`. Evaluate rules in order:
+1. If minor = 9 and patch = 9: increment major, reset minor and patch to 0 (e.g. `0.9.9` → `1.0.0`)
+2. If patch = 9: increment minor, reset patch to 0 (e.g. `0.0.9` → `0.1.0`)
+3. Otherwise: increment patch (e.g. `0.0.3` → `0.0.4`)
+
+All releases are GitHub pre-releases until version reaches `1.0.0`.
 
 ## Steps
 
@@ -49,13 +50,21 @@ Starting at `0.0.1`. Rules:
 
 7. **Tell the user:**
    - The PR URL
-   - After merging, run: `git tag vNEW && git push origin vNEW`
-   - This will trigger `publish-nuget.yml` and `deploy-website.yml`
+   - After merging, run these commands to tag and create the GitHub release:
 
-## Pre-release Marking
+   ```bash
+   git tag vNEW
+   git push origin vNEW
+   ```
 
-When pushing the tag, if version < `1.0.0`, mark the GitHub release as pre-release:
+   Then create the GitHub release (pre-release if version < `1.0.0`):
 
-```bash
-gh release create vNEW --prerelease --title "vNEW" --notes "Release vNEW"
-```
+   ```bash
+   # For pre-release (version < 1.0.0):
+   gh release create vNEW --prerelease --title "vNEW" --notes "Release vNEW"
+
+   # For stable release (version = 1.0.0 or higher):
+   gh release create vNEW --title "vNEW" --notes "Release vNEW"
+   ```
+
+   Pushing the tag triggers `publish-nuget.yml` and `deploy-website.yml`.
