@@ -6,7 +6,7 @@ export function Footer() {
         href="https://github.com/juanmicrosoft/controller-agent-mcp"
         className="underline hover:text-gray-700"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         GitHub
       </a>

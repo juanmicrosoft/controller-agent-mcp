@@ -15,7 +15,7 @@ export function Home() {
           href="https://github.com/juanmicrosoft/controller-agent-mcp"
           className="rounded-lg bg-gray-900 px-6 py-3 text-white hover:bg-gray-700"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           View on GitHub
         </a>
