@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Cacique/Cacique.csproj" />
+  <Project Path="tests/Cacique.Tests/Cacique.Tests.csproj" />
+</Solution>

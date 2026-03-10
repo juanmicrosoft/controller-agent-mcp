@@ -5,14 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>controller-agent-mcp</ToolCommandName>
-    <PackageId>ControllerAgentMcp</PackageId>
+    <ToolCommandName>cacique</ToolCommandName>
+    <PackageId>Cacique</PackageId>
     <Version>0.0.1</Version>
     <Authors>juanmicrosoft</Authors>
     <Description>An MCP server that allows coding agents to coordinate work between them using Azure Queues.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/juanmicrosoft/controller-agent-mcp</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/juanmicrosoft/controller-agent-mcp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/juanmicrosoft/cacique</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/juanmicrosoft/cacique</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>mcp;agents;azure;queues;coordination</PackageTags>
   </PropertyGroup>

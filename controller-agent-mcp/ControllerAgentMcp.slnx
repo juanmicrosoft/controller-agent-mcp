@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="src/ControllerAgentMcp/ControllerAgentMcp.csproj" />
-  <Project Path="tests/ControllerAgentMcp.Tests/ControllerAgentMcp.Tests.csproj" />
-</Solution>

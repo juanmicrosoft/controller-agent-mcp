@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace ControllerAgentMcp.Tests;
+namespace Cacique.Tests;
 
 public class PlaceholderTest
 {
