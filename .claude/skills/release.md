@@ -17,15 +17,15 @@ All releases are GitHub pre-releases until version reaches `1.0.0`.
 
 ## Steps
 
-1. **Read current version** from `controller-agent-mcp/src/ControllerAgentMcp/ControllerAgentMcp.csproj`:
+1. **Read current version** from `cacique/src/Cacique/Cacique.csproj`:
 
    ```bash
-   grep -oP '(?<=<Version>)[^<]+' controller-agent-mcp/src/ControllerAgentMcp/ControllerAgentMcp.csproj
+   grep -oP '(?<=<Version>)[^<]+' cacique/src/Cacique/Cacique.csproj
    ```
 
 2. **Compute the next version** following the rules above.
 
-3. **Update `ControllerAgentMcp.csproj`** — replace `<Version>OLD</Version>` with `<Version>NEW</Version>`
+3. **Update `Cacique.csproj`** — replace `<Version>OLD</Version>` with `<Version>NEW</Version>`
 
 4. **Update `website/package.json`** — replace `"version": "OLD"` with `"version": "NEW"`
 
@@ -33,7 +33,7 @@ All releases are GitHub pre-releases until version reaches `1.0.0`.
 
    ```bash
    git checkout -b release/vNEW
-   git add controller-agent-mcp/src/ControllerAgentMcp/ControllerAgentMcp.csproj website/package.json
+   git add cacique/src/Cacique/Cacique.csproj website/package.json
    git commit -m "chore: bump version to vNEW"
    git push origin release/vNEW
    ```

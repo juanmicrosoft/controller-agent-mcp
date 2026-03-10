@@ -1,14 +1,14 @@
-# Controller Agent MCP
+# Cacique
 
-[![Build](https://github.com/juanmicrosoft/controller-agent-mcp/actions/workflows/publish-nuget.yml/badge.svg)](https://github.com/juanmicrosoft/controller-agent-mcp/actions/workflows/publish-nuget.yml)
-[![NuGet](https://img.shields.io/nuget/v/ControllerAgentMcp.svg)](https://www.nuget.org/packages/ControllerAgentMcp)
-[![License](https://img.shields.io/github/license/juanmicrosoft/controller-agent-mcp)](LICENSE)
+[![Build](https://github.com/juanmicrosoft/cacique/actions/workflows/publish-nuget.yml/badge.svg)](https://github.com/juanmicrosoft/cacique/actions/workflows/publish-nuget.yml)
+[![NuGet](https://img.shields.io/nuget/v/Cacique.svg)](https://www.nuget.org/packages/Cacique)
+[![License](https://img.shields.io/github/license/juanmicrosoft/cacique)](LICENSE)
 
 An MCP server that allows coding agents to coordinate work between them across multiple machines using Azure Queues.
 
 ## Overview
 
-Controller Agent MCP implements a master/slave coordination model for AI coding agents. One master agent orchestrates multiple slave agents, each running on a different machine, using Azure Storage Queues as the message bus.
+Cacique implements a master/slave coordination model for AI coding agents. One master agent orchestrates multiple slave agents, each running on a different machine, using Azure Storage Queues as the message bus.
 
 ## Architecture
 
@@ -21,7 +21,7 @@ Controller Agent MCP implements a master/slave coordination model for AI coding 
 ### Install the MCP tool
 
 ```bash
-dotnet tool install --global ControllerAgentMcp
+dotnet tool install --global Cacique
 ```
 
 ### Configure
@@ -32,7 +32,7 @@ Set the Azure Storage connection string via MCP configuration or environment var
 
 | Project | Description |
 |---------|-------------|
-| [`controller-agent-mcp/`](controller-agent-mcp/) | C# dotnet tool — the MCP server |
+| [`cacique/`](cacique/) | C# dotnet tool — the MCP server |
 | [`website/`](website/) | Marketing and documentation site |
 
 ## Contributing
