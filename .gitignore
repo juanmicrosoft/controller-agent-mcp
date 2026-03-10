@@ -15,3 +15,4 @@ node_modules/
 website/dist/
 website/.env
 website/.env.local
+website/.env.*.local
