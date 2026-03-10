@@ -1,2 +1,17 @@
-# Claude Code settings
-.claude/
+# Claude Code settings (skills are committed; only ignore the settings file)
+.claude/settings.json
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.nupkg
+*.snupkg
+
+# Node / website
+node_modules/
+website/dist/
+website/.env
+website/.env.local
